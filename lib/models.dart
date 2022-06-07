@@ -13,18 +13,16 @@ class LoginHandler {
   const LoginHandler.foorBar() : token = 'foobar';
 
   @override
-  bool operator == (covariant LoginHandler other) => token == other.token;
+  bool operator ==(covariant LoginHandler other) => token == other.token;
 
   @override
-  int get hashCode => super.hashCode; 
+  int get hashCode => super.hashCode;
 
   @override
   String toString() => 'LoginHandler (token = $token)';
 }
 
-enum LoginError {
-  invalidHandler
-}
+enum LoginError { invalidHandler }
 
 @immutable
 class Note {
@@ -32,8 +30,8 @@ class Note {
 
   const Note({required this.title});
 
-   @override
+  @override
   String toString() => 'Note (title = $title)';
 }
 
-final mockNotes = Iterable.generate(3,(i) => Note(title: 'Note ${i + 1}'));
+final mockNotes = Iterable.generate(3, (i) => Note(title: 'Note ${i + 1}'));
